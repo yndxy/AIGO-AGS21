@@ -29,11 +29,11 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/cu
 # git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo.git package/custom/momo
 
 # Daed
-rm -rf feeds/luci/applications/luci-app-daed feeds/luci/applications/luci-app-dae feeds/net/daee feeds/net/dae
-# find ./ -name "Makefile" | grep -E "daed|dae|luci-app-daede" | xargs rm -f
+# rm -rf feeds/luci/applications/luci-app-daed feeds/luci/applications/luci-app-dae feeds/net/daee feeds/net/dae
+find ./ -name "Makefile" | grep -E "daed|dae|luci-app-dae|luci-app-daed" | xargs rm -f
 git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/daede
 # 添加 vmlinux-btf 模块
-git clone https://github.com/kenzok8/vmlinux-btf.git package/custom/vmlinux-btf
+# git clone https://github.com/kenzok8/vmlinux-btf.git package/custom/vmlinux-btf
 
 # SSR+
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/custom/ssrp
@@ -86,6 +86,9 @@ rm $WORKINGDIR/${LUCIBRANCH}.zip
 # VPN
 # git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/custom/easytier
 # git clone --depth=1 https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community.git package/custom/tailscale-community
+
+# AdGuardHome
+git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/custom/luci-app-adguardhome
 
 # 主题
 # git clone --depth=1 -b openwrt-25.12 https://github.com/sbwml/luci-theme-argon.git package/custom/luci-theme-argon
