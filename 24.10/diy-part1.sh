@@ -29,10 +29,11 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/cu
 # git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo.git package/custom/momo
 
 # Daed
-git clone --depth=1 -b kix https://github.com/QiuSimons/luci-app-daed.git package/custom/daed
-# git clone --depth=1 -b master https://github.com/QiuSimons/luci-app-daed.git package/custom/daed
+rm -rf feeds/luci/applications/luci-app-daed feeds/luci/applications/luci-app-dae feeds/net/daee feeds/net/dae
+# find ./ -name "Makefile" | grep -E "daed|dae|luci-app-daede" | xargs rm -f
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/luci-app-daede
 # 添加 vmlinux-btf 模块
-git clone --depth=1 https://github.com/QiuSimons/vmlinux-btf.git package/custom/vmlinux-btf
+git clone https://github.com/kenzok8/vmlinux-btf.git package/custom/vmlinux-btf
 
 # SSR+
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/custom/ssrp
