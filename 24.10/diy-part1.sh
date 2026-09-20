@@ -31,7 +31,7 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/cu
 # Daed
 rm -rf feeds/luci/applications/luci-app-daed feeds/luci/applications/luci-app-dae feeds/net/daee feeds/net/dae
 # find ./ -name "Makefile" | grep -E "daed|dae|luci-app-daede" | xargs rm -f
-git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/luci-app-daede
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/daede
 # 添加 vmlinux-btf 模块
 git clone https://github.com/kenzok8/vmlinux-btf.git package/custom/vmlinux-btf
 
