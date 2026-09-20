@@ -57,7 +57,7 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 
 # Daed
-rm -rf feeds/luci/applications/luci-app-daed feeds/luci/applications/luci-app-dae feeds/package/net/daee feeds/package/net/dae
+rm -rf feeds/luci/applications/luci-app-daed feeds/luci/applications/luci-app-dae feeds/package/net/daed feeds/package/net/dae
 # find ./ -name "Makefile" | grep -E "daed|dae|luci-app-dae|luci-app-daed" | xargs rm -f
 git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/daede
 # 添加 vmlinux-btf 模块
