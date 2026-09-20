@@ -28,13 +28,6 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/cu
 # git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/custom/nikki
 # git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo.git package/custom/momo
 
-# Daed
-# rm -rf feeds/luci/applications/luci-app-daed feeds/luci/applications/luci-app-dae feeds/net/daee feeds/net/dae
-find ./ -name "Makefile" | grep -E "daed|dae|luci-app-dae|luci-app-daed" | xargs rm -f
-git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/daede
-# 添加 vmlinux-btf 模块
-# git clone https://github.com/kenzok8/vmlinux-btf.git package/custom/vmlinux-btf
-
 # SSR+
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/custom/ssrp
 
@@ -63,25 +56,12 @@ git clone https://github.com/sbwml/v2ray-geodata package/custom/v2ray-geodata
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 
-# 升级替换 smartdns
-WORKINGDIR="`pwd`/feeds/packages/net/smartdns"
-mkdir $WORKINGDIR -p
-rm $WORKINGDIR/* -fr
-wget https://github.com/pymumu/openwrt-smartdns/archive/master.zip -O $WORKINGDIR/master.zip
-unzip $WORKINGDIR/master.zip -d $WORKINGDIR
-mv $WORKINGDIR/openwrt-smartdns-master/* $WORKINGDIR/
-rmdir $WORKINGDIR/openwrt-smartdns-master
-rm $WORKINGDIR/master.zip
-
-LUCIBRANCH="master" #更换此变量
-WORKINGDIR="`pwd`/feeds/luci/applications/luci-app-smartdns"
-mkdir $WORKINGDIR -p
-rm $WORKINGDIR/* -fr
-wget https://github.com/pymumu/luci-app-smartdns/archive/${LUCIBRANCH}.zip -O $WORKINGDIR/${LUCIBRANCH}.zip
-unzip $WORKINGDIR/${LUCIBRANCH}.zip -d $WORKINGDIR
-mv $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}/* $WORKINGDIR/
-rmdir $WORKINGDIR/luci-app-smartdns-${LUCIBRANCH}
-rm $WORKINGDIR/${LUCIBRANCH}.zip
+# Daed
+# rm -rf feeds/luci/applications/luci-app-daed feeds/luci/applications/luci-app-dae feeds/net/daee feeds/net/dae
+find ./ -name "Makefile" | grep -E "daed|dae|luci-app-dae|luci-app-daed" | xargs rm -f
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/daede
+# 添加 vmlinux-btf 模块
+# git clone https://github.com/kenzok8/vmlinux-btf.git package/custom/vmlinux-btf
 
 # VPN
 # git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/custom/easytier
