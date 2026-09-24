@@ -55,7 +55,6 @@ git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/l
 
 # Daed
 rm -rf package/*/daed package/*/luci-app-daed feeds/*/daed feeds/*/luci-app-daed
-# rm -rf feeds/luci/applications/luci-app-daed feeds/luci/applications/luci-app-dae feeds/package/net/daed feeds/package/net/dae
 # find ./ -name "Makefile" | grep -E "daed|dae|luci-app-dae|luci-app-daed" | xargs rm -f
 # find ./ -name "Makefile" | grep -E "/(daed|dae|luci-app-dae)/" | xargs rm -f
 git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/daede
