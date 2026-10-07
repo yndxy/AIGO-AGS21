@@ -1,7 +1,7 @@
 name: 25.12-ags21
 
 env:
-  DEVICE_NAME: 25.12-mt7981
+  DEVICE_NAME: 25.12-ags21
   REPO_URL: https://github.com/chasey-dev/immortalwrt-mt798x-rebase
   REPO_BRANCH: 25.12
   FEEDS_CONF: feeds.conf.default
